@@ -32,4 +32,6 @@ jobs:
       - name: 'Linter'
         run: npm run lint
       - name: 'Test econogest apps'
-        run: npm run test
+        run: npm run test:econogest
+      - name: 'Test transactions libs'
+        run: npm run test:transactions

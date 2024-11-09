@@ -4,8 +4,10 @@
   "license": "MIT",
   "scripts": {
     "build:prod": "nx build econogest-back",
-    "test": "nx test econogest-back",
-    "test:watch": "nx test econogest-back --watch",
+    "test:econogest": "nx test econogest-back",
+    "test:econogest:watch": "nx test econogest-back --watch",
+    "test:transactions": "nx test transactions",
+    "test:transactions:watch": "nx test transactions --watch",
     "lint": "nx lint econogest-back"
   },
   "private": true,
@@ -45,6 +47,7 @@
     "prisma": "^5.22.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "tslib": "^2.3.0",
     "typescript": "~5.5.2",
     "typescript-eslint": "^8.0.0",
