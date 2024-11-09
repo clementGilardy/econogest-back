@@ -2,7 +2,12 @@
   "name": "@econogest-back/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:prod": "nx build econogest-back",
+    "test": "nx test econogest-back",
+    "test:watch": "nx test econogest-back --watch",
+    "lint": "nx lint econogest-back"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
