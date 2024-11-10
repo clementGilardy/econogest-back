@@ -1,0 +1,7 @@
+http:
+  host: 'localhost'
+  port: 3417
+
+db:
+  sqlite:
+    database: "sqlite.db"

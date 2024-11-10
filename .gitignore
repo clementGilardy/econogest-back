@@ -40,3 +40,8 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+prisma/migrations/dev/

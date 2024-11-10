@@ -1,12 +1,17 @@
 import { Module } from '@nestjs/common';
-
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CqrsModule } from '@nestjs/cqrs';
 import { TransactionsModule } from '@econogest-back/transactions';
+import { ConfigModule } from '@nestjs/config';
+import configuration from './config/configuration';
 
 @Module({
-  imports: [CqrsModule, TransactionsModule],
+  imports: [
+    ConfigModule.forRoot({ load: [configuration] }),
+    CqrsModule,
+    TransactionsModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
