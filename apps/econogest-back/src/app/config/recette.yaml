@@ -1,6 +1,2 @@
 http:
   host: 'localhost'
-
-db:
-  sqlite:
-    database: "sqlite.db"

@@ -45,3 +45,4 @@ Thumbs.db
 prisma/*.db
 prisma/*.db-journal
 prisma/migrations/dev/
+.env
