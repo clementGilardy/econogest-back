@@ -17,7 +17,9 @@ model Transaction {
   id       Int      @id @default(autoincrement())
   amount   Int
   type     String
-  date     DateTime
+  date     String
   notes    String?
   category String
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
 }

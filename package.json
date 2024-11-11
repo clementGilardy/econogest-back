@@ -8,6 +8,8 @@
     "test:econogest:watch": "nx test econogest-back --watch",
     "test:transactions": "nx test transactions",
     "test:transactions:watch": "nx test transactions --watch",
+    "test:database": "nx test transactions",
+    "test:database:watch": "nx test transactions --watch",
     "lint": "nx lint econogest-back"
   },
   "private": true,

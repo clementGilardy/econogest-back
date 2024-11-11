@@ -12,7 +12,7 @@ export class CreateTransactionDto {
 
   @IsString()
   @IsNotEmpty()
-  date!: Date;
+  date!: string;
 
   @IsNotEmpty()
   @IsString()

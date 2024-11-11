@@ -1,15 +1,14 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { CreateTransactionDto } from '../dto/create-transaction.dto';
-import { TransactionsService } from '../services/transactions.service';
+import { CommandBus } from '@nestjs/cqrs';
+import { CreateTransactionCommand } from '../commands/impl/create-transaction.command';
 
 @Controller('transactions')
 export class TransactionsController {
-
-  constructor(private readonly transactionsService: TransactionsService) {
-  }
+  constructor(private readonly commandBus: CommandBus) {}
 
   @Post()
   createTransaction(@Body() transaction: CreateTransactionDto) {
-    return this.transactionsService.createTransaction(transaction);
+    return this.commandBus.execute(new CreateTransactionCommand(transaction));
   }
 }
